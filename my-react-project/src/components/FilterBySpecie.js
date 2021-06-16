@@ -14,6 +14,7 @@ const FilterBySpecie = (props) => {
         type="text"
         name="specie"
         id="specie"
+        placeholder="Filtra por especie"
         value={props.filterSpecie}
         onChange={handleChange}
       />

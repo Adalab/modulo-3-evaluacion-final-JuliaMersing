@@ -22,7 +22,9 @@ const App = () => {
 
   useEffect(() => {
     ls.set("characters", characters);
-  }, [characters]);
+    ls.set("filterName", filterName);
+    ls.set("filterSpecie", filterSpecie);
+  }, [characters, filterName, filterSpecie]);
 
   const handleFilter = (data) => {
     console.log(data);
@@ -33,16 +35,30 @@ const App = () => {
     }
   };
 
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((character) => {
+      if (filterSpecie === "") {
+        return true;
+      } else {
+        return character.specie
+          .toLowerCase()
+          .includes(filterSpecie.toLowerCase());
+      }
+    });
+
   return (
     <div className="page">
       <img className="logo" src={Logo} alt="Logo" />
       <Filters
         filterName={filterName}
-        filterGender={filterSpecie}
+        filterSpecies={filterSpecie}
         handleFilter={handleFilter}
       />
       <ul className="characterList">
-        <CharactersList characters={characters} />
+        <CharactersList characters={filteredCharacters} />
       </ul>
     </div>
   );

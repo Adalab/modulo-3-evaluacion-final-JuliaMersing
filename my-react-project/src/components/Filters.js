@@ -12,7 +12,7 @@ const Filters = (props) => {
         />
         <FilterBySpecie
           filterSpecie={props.filterSpecie}
-          handleSpecie={props.handleFilter}
+          handleFilter={props.handleFilter}
         />
       </form>
     </section>

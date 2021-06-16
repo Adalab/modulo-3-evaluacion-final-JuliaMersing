@@ -16,6 +16,7 @@ const FilterByName = (props) => {
         type="text"
         name="name"
         id="name"
+        placeholder="Filtra por nombre"
         value={props.filterName}
         onChange={handleChange}
       />
