@@ -14,11 +14,12 @@
   padding-top: 15%;
 }
 
-.inputSearch {
+.inputsearch {
   width: 450px;
   border-color: cyan;
   background-color: black;
   margin-left: 10px;
+  color: white;
 }
 
 .allCharacters {

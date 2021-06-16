@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import getApiData from "../services/Api";
 import CharactersList from "./CharactersList";
+import Notfound from "./Notfound";
 import CharacterDetail from "./CharacterDetail";
 import Logo from "../Image/Rick_and_Morty.png";
 import "../stylesheet/App.css";
@@ -19,7 +20,6 @@ const App = () => {
         setCharacters(charactersData);
       });
     }
-    //console.log(characters);
   }, []);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const App = () => {
     if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
     } else {
-      return <p>Personaje no encontrado</p>;
+      return <Notfound />;
     }
   };
 

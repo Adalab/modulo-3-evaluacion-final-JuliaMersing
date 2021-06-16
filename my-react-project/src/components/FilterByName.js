@@ -10,16 +10,18 @@ const FilterByName = (props) => {
   };
   return (
     <>
-      <label htmlFor="name"> </label>
-      <input
-        className="inputSearch"
-        type="text"
-        name="name"
-        id="name"
-        placeholder="Filtra por nombre"
-        value={props.filterName}
-        onChange={handleChange}
-      />
+      <form action="#">
+        <label htmlFor="name"> </label>
+        <input
+          className="inputsearch"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Filtra por nombre"
+          value={props.filterName}
+          onChange={handleChange}
+        />
+      </form>
     </>
   );
 };

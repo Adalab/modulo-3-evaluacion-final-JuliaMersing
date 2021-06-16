@@ -4,7 +4,6 @@ const getApiData = () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const cleanData = data.map((character) => {
         return {
           name: character.name,

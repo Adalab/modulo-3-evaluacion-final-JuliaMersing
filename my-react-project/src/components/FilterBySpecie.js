@@ -9,16 +9,18 @@ const FilterBySpecie = (props) => {
   };
   return (
     <>
-      <label inputSearch htmlFor="specie"></label>
-      <input
-        className="inputSearch"
-        type="text"
-        name="specie"
-        id="specie"
-        placeholder="Filtra por especie"
-        value={props.filterSpecie}
-        onChange={handleChange}
-      />
+      <form action="#">
+        <label inputsearch htmlFor="specie"></label>
+        <input
+          className="inputsearch"
+          type="text"
+          name="specie"
+          id="specie"
+          placeholder="Filtra por especie"
+          value={props.filterSpecie}
+          onChange={handleChange}
+        />
+      </form>
     </>
   );
 };
