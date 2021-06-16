@@ -4,14 +4,17 @@ const getApiData = () => {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       const cleanData = data.map((character) => {
         return {
           name: character.name,
           photo: character.image,
           specie: character.species,
           id: character.id,
+          planet: character.origin.name,
+          episode: character.episode,
+          status: character.status,
         };
-        /* console.log(cleanData); */
       });
       return cleanData;
     });

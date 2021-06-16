@@ -1,7 +1,6 @@
 import React from "react";
 
 const FilterByName = (props) => {
-  console.log(props);
   const handleChange = (ev) => {
     console.log(ev);
     props.handleFilter({
