@@ -9,12 +9,12 @@ const FilterBySpecie = (props) => {
   };
   return (
     <>
-      <label htmlFor="name">Filtrar por especie:</label>
+      <label htmlFor="specie">Filtrar por especie:</label>
       <input
         type="text"
-        name="name"
-        id="name"
-        value={props.filterName}
+        name="specie"
+        id="specie"
+        value={props.filterSpecie}
         onChange={handleChange}
       />
     </>

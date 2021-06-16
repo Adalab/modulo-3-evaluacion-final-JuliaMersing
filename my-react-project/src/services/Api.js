@@ -11,8 +11,8 @@ const getApiData = () => {
           specie: character.species,
           id: character.id,
         };
+        /* console.log(cleanData); */
       });
-      console.log(cleanData);
       return cleanData;
     });
 };

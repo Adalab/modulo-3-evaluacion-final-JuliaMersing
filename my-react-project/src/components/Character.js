@@ -6,7 +6,7 @@ const Character = (props) => {
     <article className="characterCard">
       <img
         className="imageCharacter"
-        src={props.character.image}
+        src={props.character.photo}
         alt={props.character.name}
       />
       <h4>{props.character.name}</h4>

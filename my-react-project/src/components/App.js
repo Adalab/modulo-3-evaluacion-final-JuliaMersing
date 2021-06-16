@@ -8,14 +8,15 @@ import Filters from "./Filters";
 
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
-  /*   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
-  const [filterSpecie, setFilterpecie] = useState(ls.get("filterSpecie", "")); */
+  const [filterName, setFilterName] = useState(ls.get("filterName", ""));
+  const [filterSpecie, setFilterSpecie] = useState(ls.get("filterSpecie", ""));
 
   useEffect(() => {
     if (characters.length === 0) {
       getApiData().then((charactersData) => {
         setCharacters(charactersData);
       });
+      console.log(characters);
     }
   }, []);
 
@@ -23,21 +24,25 @@ const App = () => {
     ls.set("characters", characters);
   }, [characters]);
 
-  /*  const handleFilter = (data) => {
+  const handleFilter = (data) => {
+    console.log(data);
     if (data.key === "name") {
       setFilterName(data.value);
     } else if (data.key === "specie") {
       setFilterSpecie(data.value);
     }
-  }; */
+  };
 
   return (
     <div className="page">
       <img className="logo" src={Logo} alt="Logo" />
-      <input className="input" type="text" />
+      <Filters
+        filterName={filterName}
+        filterGender={filterSpecie}
+        handleFilter={handleFilter}
+      />
       <ul className="characterList">
         <CharactersList characters={characters} />
-        {/* <Filters filterName={filterName} filterGender={filterSpecie}  handleFilter={handleFilter}/> */}
       </ul>
     </div>
   );
