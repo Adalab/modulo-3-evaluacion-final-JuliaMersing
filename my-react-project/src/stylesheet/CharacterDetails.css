@@ -1,0 +1,30 @@
+.SingleCharacter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.singleCharacterCard {
+  margin-bottom: 20px;
+  background-color: #09a7c2;
+  overflow-wrap: break-word;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 450px;
+}
+
+.link {
+  color: white;
+}
+
+.characterDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}

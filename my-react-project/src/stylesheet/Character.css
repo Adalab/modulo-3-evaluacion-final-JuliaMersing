@@ -1,5 +1,6 @@
 .characterCard {
-  background-color: turquoise;
+  background-color: #09a7c2;
+  overflow-wrap: break-word;
 }
 
 .imageCharacter {

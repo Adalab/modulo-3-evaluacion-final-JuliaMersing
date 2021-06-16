@@ -74,12 +74,17 @@ const App = () => {
               filterSpecies={filterSpecie}
               handleFilter={handleFilter}
             />
-            <ul className="characterList">
+            <ul>
               <CharactersList characters={filteredCharacters} />
             </ul>
           </div>
         </Route>
-        <Route path="/character/:characterId" render={renderCharacterDetails} />
+        <div className="SingleCharacter">
+          <Route
+            path="/character/:characterId"
+            render={renderCharacterDetails}
+          />
+        </div>
       </Switch>
     </div>
   );

@@ -9,8 +9,9 @@ const FilterBySpecie = (props) => {
   };
   return (
     <>
-      <label htmlFor="specie">Filtrar por especie:</label>
+      <label inputSearch htmlFor="specie"></label>
       <input
+        className="inputSearch"
         type="text"
         name="specie"
         id="specie"
