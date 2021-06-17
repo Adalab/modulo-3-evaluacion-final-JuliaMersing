@@ -1,12 +1,15 @@
 import React from "react";
+import "../stylesheet/Notfound.css";
 
 const Notfound = () => {
   return (
-    <div>
-      <p>Are you sure that you are searching for the right name?</p>
-      {/* <a href="https://media3.giphy.com/media/3oEdva2j2viubNhSes/200.gif?cid=6104955eb5b407e621d8affc630360378a30d3984c78f192&rid=200.gif&ct=g&cid=6104955eb5b407e621d8affc630360378a30d3984c78f192&rid=200.gif&ct=g">
-        https://media3.giphy.com/media/3oEdva2j2viubNhSes/200.gif?cid=6104955eb5b407e621d8affc630360378a30d3984c78f192&rid=200.gif&ct=g&cid=6104955eb5b407e621d8affc630360378a30d3984c78f192&rid=200.gif&ct=g
-      </a> */}
+    <div className="notfound">
+      <p>You may have made a typing error. This character does not exist </p>
+      <img
+        className="notfoundImg"
+        src="https://media2.giphy.com/media/3o7TKuAfCHifvPdcxG/200.gif?cid=6104955ee217f4e7cd4aa21708ff12d11c326ef5d3f38193&rid=200.gif&ct=g&cid=6104955ee217f4e7cd4aa21708ff12d11c326ef5d3f38193&rid=200.gif&ct=g"
+        alt=""
+      />
     </div>
   );
 };
