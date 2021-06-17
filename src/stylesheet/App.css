@@ -20,15 +20,18 @@
   background-color: black;
   margin-left: 10px;
   color: white;
+  margin-bottom: 15px;
+}
+.allCharacters {
 }
 
+/*
 .allCharacters {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 }
+*/

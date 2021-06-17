@@ -58,11 +58,10 @@ const App = () => {
     });
     if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
-    } else {
-      return <Notfound />;
     }
   };
 
+  console.log(filteredCharacters.length);
   return (
     <div className="page">
       <img className="logo" src={Logo} alt="Logo" />
@@ -75,7 +74,11 @@ const App = () => {
               handleFilter={handleFilter}
             />
             <ul>
-              <CharactersList characters={filteredCharacters} />
+              {filteredCharacters.length > 0 ? (
+                <CharactersList characters={filteredCharacters} />
+              ) : (
+                <Notfound />
+              )}
             </ul>
           </div>
         </Route>
