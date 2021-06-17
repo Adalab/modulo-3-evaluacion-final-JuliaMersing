@@ -18,6 +18,7 @@
 }
 .imageCharacter {
   height: 250px;
+  border-radius: 10px;
 }
 .link {
   color: white;
