@@ -67,7 +67,7 @@ const App = () => {
       <img className="logo" src={Logo} alt="Logo" />
       <Switch>
         <Route exact path="/">
-          <div className="allCharacters">
+          <div>
             <Filters
               filterName={filterName}
               filterSpecies={filterSpecie}

@@ -1,9 +1,5 @@
 .characterCard {
+  margin: 1px;
   background-color: #09a7c2;
-  overflow-wrap: break-word;
-}
-
-.imageCharacter {
-  width: 150px;
-  height: 150px;
+  transform: scale(0.8);
 }

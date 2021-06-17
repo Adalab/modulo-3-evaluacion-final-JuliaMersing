@@ -3,12 +3,25 @@ import { Link } from "react-router-dom";
 import "../stylesheet/CharacterDetails.css";
 
 const CharacterDetail = (props) => {
-  return (
-    /* const renderStatus = {props.character.status}
-    if (renderStatus === dead) {
-      return <i class="fas fa-dizzy"></i>
-    }  */
+  const renderStatus = () => {
+    if (props.character.status === "Dead") {
+      return <i class="fas fa-dizzy"></i>;
+    } else if (props.character.status === "unknown") {
+      return <i class="far fa-question-circle"></i>;
+    } else if (props.character.status === "Alive") {
+      return "Alive";
+    }
+  };
 
+  const renderSpecies = () => {
+    if (props.character.specie === "Human") {
+      return <i class="far fa-user"></i>;
+    } else if (props.character.specie === "Humanoid") {
+      return <i class="fab fa-reddit-alien"></i>;
+    }
+  };
+
+  return (
     <div>
       <article className="singleCharacterCard">
         <img
@@ -19,10 +32,10 @@ const CharacterDetail = (props) => {
         <div className="characterDetails">
           <h4>{props.character.name}</h4>
           <ul>
-            <li>Specie: {props.character.specie}</li>
+            <li>Specie: {renderSpecies()}</li>
             <li>Planet: {props.character.planet}</li>
             <li>Episodes: {props.character.episode.length}</li>
-            <li>Status: {props.character.status}</li>
+            <li>Status: {renderStatus()}</li>
           </ul>
         </div>
       </article>

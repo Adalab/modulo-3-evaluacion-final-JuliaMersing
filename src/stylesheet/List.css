@@ -1,8 +1,14 @@
 .cards {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 80%;
-  background-color: black;
+  display: grid;
+  grid-column: 1fr;
+}
+
+@media all and (min-width: 768px) {
+  .cards {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+  }
 }
