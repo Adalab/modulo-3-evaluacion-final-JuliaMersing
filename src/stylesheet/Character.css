@@ -2,4 +2,9 @@
   margin: 1px;
   background-color: #09a7c2;
   transform: scale(0.8);
+  border-radius: 10px;
+}
+
+.characterCard :hover {
+  transform: scale(1.2);
 }
