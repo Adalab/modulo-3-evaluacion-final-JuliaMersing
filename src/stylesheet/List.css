@@ -1,11 +1,12 @@
 .cards {
   display: grid;
   grid-column: 1fr;
+  color: white;
+  text-align: center;
 }
 
 @media all and (min-width: 768px) {
   .cards {
-    color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

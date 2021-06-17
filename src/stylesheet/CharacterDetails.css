@@ -12,11 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 250px;
-  width: 450px;
+  height: 350px;
+  width: 550px;
 }
 .imageCharacter {
   height: 250px;
+  padding-left: 10px;
 }
 .link {
   color: white;
