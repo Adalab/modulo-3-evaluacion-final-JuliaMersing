@@ -22,7 +22,7 @@ const CharacterDetail = (props) => {
   };
 
   return (
-    <div>
+    <div className="SingleCharacter">
       <article className="singleCharacterCard">
         <img
           className="imageCharacter"

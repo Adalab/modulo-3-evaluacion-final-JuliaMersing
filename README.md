@@ -1,20 +1,46 @@
-# Ejercicio de evaluación final REACT
+# React evaluation: Rick and Morty Directory
 
-Hola! Este es un proyecto es la realización de una página web **utilizando REACT**
+This is my React evaluation for Adalab's bootcamp. It is an interactive website using react, hope you like it!
 
-## Qué es React
+## Initial Requirements
 
-Hasta ahora hemos visto cómo crear webs escribiendo la vista en archivos HTML y el comportamiento, la lógica, en archivos JavaScript. La tendencia actual es escribir vista y comportamiento juntos, en lo que llamamos componentes, que serán reutilizables.
-React es una librería que nos permite hacer componentes gráficos (botones, listados, cabeceras, inputs...) con los que estructurar nuestra web. Los componentes gráficos se pintarán "solos" en el DOM, sin que tengamos que manejarlo "a mano". Además, React lo hace de una manera pensada para que los componentes cambien, así que crearemos webs muy reactivas y rápidas.
-Es intuitivo hacer webs con React porque todo son componentes que llaman a otros componentes. El flujo es unidireccional (de arriba a abajo), así que es fácil entender y solucionar los errores que pueda haber.
+- Create a react app.
+- The app must fetch from an API.
+- Render the characters information on the home page. Required information is: Picture, name and specie.
+- Add a filter that allows the user to search by name any character.
+- There are four mandatory components: Filters, CharacterList, CharacterCard and CharacterDetail.
+- If the user clicks on any character card, a new route must be created that shows the clicked character detail. Detail must show previous information plus origin planet and episodes.
 
-## Guía de inicio rápido
+## Quality Requirements
 
-1. **Crea tu propio repositorio.**
-2. Clona este proyecto en tu repositorio.
-3. Instala de forma global la utilidad de create-react-app con **npm install -g create-react-app**
-4. Crea tu proyecto de React 'my-react-project' ejecutando en la **terminal create-react-app my-react-project**
+- Semantic must be right.
+- When the user filters if it press the enter key nothing must happen.
+- If the user search an unexistant character we must give a feedback.
+- The filter must work either if the user writes with caps on or not.
+- When in the character detail if the user wants to go back to the home page the search input value must remain.
 
-## ¿Algo que mejorar?
+## Extra features
 
-Los feedback siempre son buenos!! Si crees que falta algo o puedo mejorar, utiliza los issues o PR.
+- Add some styles.
+- Use grid for the character list.
+- Make it responsive.
+- Show icons for status and specie.
+- The character URL must be shareable.
+- If we refresh the browser, character information must be kept.
+- If the user goes to unexistant pages we must give a proper feedback.
+- Order the character list alphabetically.
+- Add an extra filter to search by specie.
+
+## Built with
+
+- Visual Code Studio: as code editor
+- SASS
+- React
+
+## Can you help me to improve?
+
+I am a lawyer turned front-end developer so I still have a lot to learn. Any ideas or suggestions are welcome.
+
+## License
+
+MIT

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import getApiData from "../services/Api";
 import CharactersList from "./CharactersList";
 import Notfound from "./Notfound";
+import PageNotFound from "./PageNotFound";
 import CharacterDetail from "./CharacterDetail";
 import Logo from "../Image/Rick_and_Morty.png";
 import "../stylesheet/App.css";
@@ -13,6 +14,7 @@ const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [filterSpecie, setFilterSpecie] = useState(ls.get("filterSpecie", ""));
+  const [filterGender, setFilterGender] = useState(ls.get("filterGender", ""));
 
   useEffect(() => {
     if (characters.length === 0) {
@@ -26,13 +28,16 @@ const App = () => {
     ls.set("characters", characters);
     ls.set("filterName", filterName);
     ls.set("filterSpecie", filterSpecie);
-  }, [characters, filterName, filterSpecie]);
+    ls.set("filterGender", filterGender);
+  }, [characters, filterName, filterSpecie, filterGender]);
 
   const handleFilter = (data) => {
     if (data.key === "name") {
       setFilterName(data.value);
     } else if (data.key === "specie") {
       setFilterSpecie(data.value);
+    } else if (data.key === "gender") {
+      setFilterGender(data.value);
     }
   };
 
@@ -48,8 +53,12 @@ const App = () => {
           .toLowerCase()
           .includes(filterSpecie.toLowerCase());
       }
+    })
+    .filter((character) => {
+      return character.gender
+        .toLowerCase()
+        .includes(filterGender.toLowerCase());
     });
-
   const renderCharacterDetails = (props) => {
     const routeCharacterId = props.match.params.characterId;
 
@@ -61,7 +70,6 @@ const App = () => {
     }
   };
 
-  console.log(filteredCharacters.length);
   return (
     <div className="page">
       <img className="logo" src={Logo} alt="Logo" />
@@ -82,12 +90,10 @@ const App = () => {
             </ul>
           </div>
         </Route>
-        <div className="SingleCharacter">
-          <Route
-            path="/character/:characterId"
-            render={renderCharacterDetails}
-          />
-        </div>
+        <Route path="/character/:characterId" render={renderCharacterDetails} />
+        <Route>
+          <PageNotFound />
+        </Route>
       </Switch>
     </div>
   );

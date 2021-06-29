@@ -13,6 +13,7 @@ const getApiData = () => {
           planet: character.origin.name,
           episode: character.episode,
           status: character.status,
+          gender: character.gender,
         };
       });
       return cleanData;
