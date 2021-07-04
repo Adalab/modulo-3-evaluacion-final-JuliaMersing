@@ -1,6 +1,8 @@
 # React evaluation: Rick and Morty Directory
 
-This is my React evaluation for Adalab's bootcamp. It is an interactive website using react, hope you like it!
+This project was built using React. The goal was to create a Rick & Morty's character finder through an API. It gives you a list of 20 characters and you can sort them by name, species, gender and status.
+
+You can also click on any given character card to find more info about it.
 
 ## Initial Requirements
 
@@ -11,7 +13,7 @@ This is my React evaluation for Adalab's bootcamp. It is an interactive website 
 - There are four mandatory components: Filters, CharacterList, CharacterCard and CharacterDetail.
 - If the user clicks on any character card, a new route must be created that shows the clicked character detail. Detail must show previous information plus origin planet and episodes.
 
-## Quality Requirements
+## Bonus
 
 - Semantic must be right.
 - When the user filters if it press the enter key nothing must happen.

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../stylesheet/CharacterDetails.css";
+import "../stylesheet/CharacterDetails.scss";
 
 const CharacterDetail = (props) => {
   const renderStatus = () => {

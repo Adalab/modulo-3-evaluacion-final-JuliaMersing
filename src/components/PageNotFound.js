@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../stylesheet/Notfound.css";
+import "../stylesheet/Notfound.scss";
 
 function PageNotFound() {
   return (

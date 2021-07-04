@@ -5,7 +5,7 @@ import Notfound from "./Notfound";
 import PageNotFound from "./PageNotFound";
 import CharacterDetail from "./CharacterDetail";
 import Logo from "../Image/Rick_and_Morty.png";
-import "../stylesheet/App.css";
+import "../stylesheet/App.scss";
 import ls from "../services/local-storage";
 import Filters from "./Filters";
 import { Route, Switch } from "react-router-dom";
