@@ -17,10 +17,8 @@ const Character = (props) => {
   const renderSpecies = () => {
     if (props.character.specie === "Human") {
       return <i class="far fa-user"></i>;
-    } else if (props.character.specie === "Humanoid") {
+    } else if (props.character.specie === "Alien") {
       return <span>👽</span>;
-    } else if (props.character.specie === "unknown") {
-      return <span>⚧️</span>;
     }
   };
 

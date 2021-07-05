@@ -46,7 +46,7 @@ const App = () => {
       return character.name.toLowerCase().includes(filterName.toLowerCase());
     })
     .filter((character) => {
-      if (filterSpecie === "") {
+      if (filterSpecie === "All") {
         return true;
       } else {
         return character.specie
