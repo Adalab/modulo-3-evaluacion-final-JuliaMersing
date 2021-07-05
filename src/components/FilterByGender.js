@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheet/FilterSelect.scss";
 
 const FilterByGender = (props) => {
   const handleChange = (ev) => {
@@ -9,21 +10,21 @@ const FilterByGender = (props) => {
   };
   return (
     <>
-      <label htmlFor="name"> </label>
-      <div>
-        <label className="inputsearch" htmlFor="Gender"></label>
-        <select
-          id="Gender"
-          name="Gender"
-          onChange={handleChange}
-          value={props.filterByGender}
-        >
-          <option value="Female">Female</option>
-          <option value="Male">Male</option>
-          <option value="Genderless">Genderless</option>
-          <option value="unknown">unknown</option>
-        </select>
-      </div>
+      <label className="form__label hidden" htmlFor="Gender">
+        Genre
+      </label>
+      <select
+        className="form__select hidden"
+        id="Gender"
+        name="Gender"
+        onChange={handleChange}
+        value={props.filterByGender}
+      >
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Genderless">Genderless</option>
+        <option value="unknown">unknown</option>
+      </select>
     </>
   );
 };

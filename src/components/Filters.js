@@ -2,11 +2,12 @@ import React from "react";
 import FilterByName from "./FilterByName";
 import FilterBySpecie from "./FilterBySpecie";
 import FilterByGender from "./FilterByGender";
+import "../stylesheet/Filter.scss";
 
 const Filters = (props) => {
   return (
     <section>
-      <form className="filters">
+      <form className="form__container">
         <FilterByName
           filterName={props.filterName}
           handleFilter={props.handleFilter}

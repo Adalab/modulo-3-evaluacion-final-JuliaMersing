@@ -1,0 +1,37 @@
+.form {
+  &__label {
+    color: #28c4c4;
+    font-size: 25px;
+    background-color: #000000;
+    margin-right: 10px;
+
+    @media all and (min-width: 768px) {
+      text-align: right;
+    }
+  }
+
+  &__select {
+    width: 200px;
+    height: 40px;
+    background: #000000;
+    color: white;
+    border: 1px solid #28c4c4;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media all and (min-width: 768px) {
+      width: 150px;
+      margin-right: 20px;
+      align-content: initial;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+
+  @media all and (min-width: 768px) {
+    display: inline-flex;
+  }
+}
