@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "./static/css/main.1e6d3b69.chunk.css",
+    "main.js": "./static/js/main.25387b46.chunk.js",
+    "main.js.map": "./static/js/main.25387b46.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.65948ad6.js",
+    "runtime-main.js.map": "./static/js/runtime-main.65948ad6.js.map",
+    "static/js/2.639fc51b.chunk.js": "./static/js/2.639fc51b.chunk.js",
+    "static/js/2.639fc51b.chunk.js.map": "./static/js/2.639fc51b.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.1e6d3b69.chunk.css.map": "./static/css/main.1e6d3b69.chunk.css.map",
+    "static/js/2.639fc51b.chunk.js.LICENSE.txt": "./static/js/2.639fc51b.chunk.js.LICENSE.txt",
+    "static/media/Rick_and_Morty.de13d484.png": "./static/media/Rick_and_Morty.de13d484.png",
+    "static/media/App.scss": "./static/media/background.1fdaab95.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.65948ad6.js",
+    "static/js/2.639fc51b.chunk.js",
+    "static/css/main.1e6d3b69.chunk.css",
+    "static/js/main.25387b46.chunk.js"
+  ]
+}
