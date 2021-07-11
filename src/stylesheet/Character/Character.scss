@@ -1,3 +1,5 @@
+@import "../Core/variables.scss";
+
 .link {
   text-decoration: none;
 }
@@ -6,8 +8,8 @@
   box-sizing: border-box;
   display: flex;
   border-radius: 25px;
-  box-shadow: 5px 5px 10px #ffffff;
-  border: 3px solid #28c4c4;
+  box-shadow: 5px 5px 10px $color-icon;
+  border: 3px solid $color-detail;
 
   &:hover {
     transform: scale(1.05);
@@ -29,7 +31,7 @@
     &--name {
       grid-row: 1/2;
       margin: 20px 25px 0 25px;
-      color: #ffffff;
+      color: $color-icon;
       padding: 3px 0 5px 0;
       font-size: 20px;
     }
@@ -37,12 +39,12 @@
     &--info {
       grid-row: 4/5;
       margin-top: 15px;
-      color: #ffffff;
+      color: $color-icon;
       text-transform: capitalize;
       border-radius: 40%;
 
       &-span {
-        background-color: #000000;
+        background-color: $color-background;
       }
     }
   }

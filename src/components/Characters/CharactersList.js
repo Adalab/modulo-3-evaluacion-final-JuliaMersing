@@ -1,6 +1,7 @@
 import React from "react";
-import Character from "./Character";
-import "../stylesheet/List.scss";
+import Character from "../Characters/Character";
+import "../../stylesheet/Character/CharacterList.scss";
+import PropTypes from "prop-types";
 
 const CharactersList = (props) => {
   const characterElements = props.characters.map((character) => {
@@ -12,6 +13,10 @@ const CharactersList = (props) => {
       <ul className="cards">{characterElements}</ul>
     </section>
   );
+};
+
+CharactersList.propTypes = {
+  characterElements: PropTypes.array,
 };
 
 export default CharactersList;

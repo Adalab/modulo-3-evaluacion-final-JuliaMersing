@@ -1,5 +1,6 @@
 import React from "react";
-import "../stylesheet/FilterSelect.scss";
+import PropTypes from "prop-types";
+import "../../stylesheet/Filters/FilterSelect.scss";
 
 const FilterBySpecie = (props) => {
   const handleChange = (ev) => {
@@ -10,11 +11,11 @@ const FilterBySpecie = (props) => {
   };
   return (
     <>
-      <label className="form__label hidden" htmlFor="specie">
+      <label className="form__label" htmlFor="specie">
         Species:
       </label>
       <select
-        className="form__select hidden"
+        className="form__select"
         id="Specie"
         name="Specie"
         onChange={handleChange}
@@ -26,6 +27,10 @@ const FilterBySpecie = (props) => {
       </select>
     </>
   );
+};
+
+FilterBySpecie.propTypes = {
+  specie: PropTypes.string,
 };
 
 export default FilterBySpecie;

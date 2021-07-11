@@ -1,8 +1,10 @@
+@import "../Core/variables.scss";
+
 .form {
   &__label {
-    color: #28c4c4;
+    color: $color-detail;
     font-size: 25px;
-    background-color: #000000;
+    background-color: $color-background;
     margin-left: 10px;
     margin-right: 10px;
 
@@ -14,9 +16,9 @@
   &__input {
     width: 250px;
     height: 40px;
-    background: #000000;
-    color: white;
-    border: 1px solid #28c4c4;
+    background: $color-background;
+    color: $color-icon;
+    border: 1px solid $color-detail;
     border-radius: 6px;
     text-align: center;
 

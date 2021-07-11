@@ -1,0 +1,21 @@
+@import "../Core/variables.scss";
+
+.reset {
+  margin-top: 20px;
+  &__button {
+    background-color: $color-detail;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: 1px solid $color-icon;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+
+    &--icon {
+      color: $color-icon;
+      font-size: 20px;
+      transition: all 0.8s ease;
+    }
+  }
+}

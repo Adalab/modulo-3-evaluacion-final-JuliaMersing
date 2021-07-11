@@ -1,3 +1,5 @@
+@import "../stylesheet/Core/variables";
+
 .notfound {
   color: white;
   display: flex;
@@ -6,9 +8,21 @@
   height: 100vh;
 }
 
-.notfoundImg {
+.notfound_img {
   width: 300px;
   height: 200px;
   align-content: center;
   margin-top: 25px;
+}
+
+.home_icon {
+  background-color: $color-detail;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 1px solid $color-icon;
+  color: $color-icon;
+  margin-top: 20px;
+  &:hover {
+    background-color: $color-hover;
+  }
 }

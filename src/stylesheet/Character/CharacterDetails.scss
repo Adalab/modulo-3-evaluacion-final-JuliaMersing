@@ -1,3 +1,5 @@
+@import "../Core/variables.scss";
+
 .SingleCharacter {
   display: flex;
   flex-direction: column;
@@ -7,8 +9,8 @@
 
 .singleCharacterCard {
   margin-bottom: 20px;
-  background-color: #000000;
-  color: white;
+  background-color: $color-background;
+  color: $color-icon;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +23,7 @@
   border-radius: 25px;
 }
 .link {
-  color: white;
+  color: $color-icon;
 }
 
 .characterDetails {

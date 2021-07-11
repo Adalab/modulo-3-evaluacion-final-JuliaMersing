@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../stylesheet/CharacterDetails.scss";
+import "../../stylesheet/Character/CharacterDetails.scss";
+import PropTypes from "prop-types";
 
 const CharacterDetail = (props) => {
   return (
@@ -21,11 +22,22 @@ const CharacterDetail = (props) => {
           </ul>
         </div>
       </article>
-      <Link className="link" to="/">
-        Volver
+      <Link to="/">
+        <i className="home_icon fas fa-reply" />
       </Link>
     </div>
   );
+};
+
+CharacterDetail.propTypes = {
+  name: PropTypes.string,
+  photo: PropTypes.string,
+  specie: PropTypes.string,
+  id: PropTypes.number,
+  planet: PropTypes.string,
+  episode: PropTypes.number,
+  status: PropTypes.string,
+  gender: PropTypes.string,
 };
 
 export default CharacterDetail;

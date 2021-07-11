@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import getApiData from "../services/Api";
-import CharactersList from "./CharactersList";
-import Notfound from "./Notfound";
-import PageNotFound from "./PageNotFound";
-import CharacterDetail from "./CharacterDetail";
+import CharactersList from "../components/Characters/CharactersList";
+import Notfound from "./NotFound/Notfound";
+import PageNotFound from "./NotFound/PageNotFound";
+import CharacterDetail from "./Characters/CharacterDetail";
 import Logo from "../Image/Rick_and_Morty.png";
 import "../stylesheet/App.scss";
 import ls from "../services/local-storage";
-import Filters from "./Filters";
+import Filters from "./Filters/Filters";
 import { Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -54,11 +54,17 @@ const App = () => {
           .includes(filterSpecie.toLowerCase());
       }
     })
+
     .filter((character) => {
-      return character.gender
-        .toLowerCase()
-        .includes(filterGender.toLowerCase());
+      if (filterGender === "all") {
+        return true;
+      } else {
+        return character.gender
+          .toLowerCase()
+          .includes(filterGender.toLowerCase());
+      }
     });
+
   const renderCharacterDetails = (props) => {
     const routeCharacterId = props.match.params.characterId;
 
@@ -70,6 +76,13 @@ const App = () => {
     }
   };
 
+  const handleReset = () => {
+    setCharacters(characters);
+    setFilterName("");
+    setFilterGender("all");
+    setFilterSpecie("All");
+  };
+
   return (
     <div className="page">
       <img className="logo" src={Logo} alt="Logo" />
@@ -79,7 +92,9 @@ const App = () => {
             <Filters
               filterName={filterName}
               filterSpecies={filterSpecie}
+              filterGender={filterGender}
               handleFilter={handleFilter}
+              handleReset={handleReset}
             />
             <ul>
               {filteredCharacters.length > 0 ? (

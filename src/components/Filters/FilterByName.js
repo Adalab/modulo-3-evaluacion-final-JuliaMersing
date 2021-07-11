@@ -1,5 +1,6 @@
 import React from "react";
-import "../stylesheet/FilterByName.scss";
+import PropTypes from "prop-types";
+import "../../stylesheet/Filters/FilterByName.scss";
 
 const FilterByName = (props) => {
   const handleChange = (ev) => {
@@ -24,6 +25,10 @@ const FilterByName = (props) => {
       />
     </>
   );
+};
+
+FilterByName.propTypes = {
+  specie: PropTypes.string,
 };
 
 export default FilterByName;
