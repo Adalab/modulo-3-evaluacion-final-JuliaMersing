@@ -11,13 +11,13 @@ const FilterByGender = (props) => {
   };
   return (
     <>
-      <label className="form__label" htmlFor="Gender">
+      <label className="form__label" htmlFor="gender">
         Gender:
       </label>
       <select
         className="form__select"
-        id="Gender"
-        name="Gender"
+        id="gender"
+        name="gender"
         onChange={handleChange}
         value={props.filterByGender}
       >

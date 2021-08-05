@@ -59,9 +59,7 @@ const App = () => {
       if (filterGender === "all") {
         return true;
       } else {
-        return character.gender
-          .toLowerCase()
-          .includes(filterGender.toLowerCase());
+        return character.gender.toLowerCase() === filterGender.toLowerCase();
       }
     });
 
