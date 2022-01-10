@@ -6,7 +6,7 @@ const ResetButton = (props) => {
     props.handleReset();
   };
   return (
-    <div className="reset">
+    <div className="reset" title='resetButton'>
       <button className="reset__button" onClick={handleResetClick}>
         <i className="reset__button--icon fas fa-trash"></i>
       </button>

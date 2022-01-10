@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import "../../stylesheet/Notfound.scss";
 import PropTypes from "prop-types";
 
-const Notfound = () => {
+const NotFound = () => {
   return (
-    <div className="notfound">
+    <div className="notfound" data-testid='characterNotFound'>
       <p>You may have made a typing error. This character does not exist </p>
       <img
         className="notfound_img"
@@ -15,8 +14,8 @@ const Notfound = () => {
   );
 };
 
-Notfound.propTypes = {
+NotFound.propTypes = {
   Notfound: PropTypes.func,
 };
 
-export default Notfound;
+export default NotFound;
