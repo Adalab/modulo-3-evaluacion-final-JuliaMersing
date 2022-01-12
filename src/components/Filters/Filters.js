@@ -3,7 +3,7 @@ import FilterByName from "./FilterByName";
 import FilterBySpecie from "./FilterBySpecie";
 import FilterByGender from "./FilterByGender";
 import "../../stylesheet/Filters/Filter.scss";
-import ResetButton from "../../services/ResetButtom";
+import ResetButton from "../../services/ResetButton";
 
 const Filters = (props) => {
   return (

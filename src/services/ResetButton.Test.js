@@ -1,19 +1,19 @@
 import React from 'react';
-import { render, screen, userEvent } from './../../utils/utilTest';
-import ResetButton from '../services/ResetButtom';
-import CharactersList from '../components/Characters/CharactersList';
+import { render} from '../utils/utilTest';
+import ResetButton from './ResetButton';
+import {BrowserRouter} from "react-router-dom";
 
 
-test('click', () => {
-    const RenderButton = () => {
-        render(
-            <div>
-              <CharactersList/>
-            </div>,
-          )
-    }
- 
-
-  userEvent.click(screen.getByText('Click'))
-  expect(screen.getByLabelText('Click')).toBeClicked()
-})
+describe('Reset Button', ()=> {
+it('click',async () => {
+  const handleClick = jest.fn()   
+  const {getByTitle} = render( 
+      <BrowserRouter>
+         <ResetButton handleReset={handleClick} />
+      </BrowserRouter>
+    )
+    const resetButton = getByTitle('resetButton')
+    resetButton.click()
+    expect(handleClick).toHaveBeenCalledTimes(1)
+  });
+});

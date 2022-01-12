@@ -74,7 +74,7 @@ const App = () => {
     }
   };
 
-  const handleReset = () => {
+  const handleResetSearchingFilters = () => {
     setCharacters(characters);
     setFilterName("");
     setFilterGender("all");
@@ -93,7 +93,7 @@ const App = () => {
                 filterSpecies={filterSpecie}
                 filterGender={filterGender}
                 handleFilter={handleFilter}
-                handleReset={handleReset}
+                handleReset={handleResetSearchingFilters}
               />
               <ul>
                 {filteredCharacters.length > 0 ? (

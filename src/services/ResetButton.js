@@ -1,13 +1,10 @@
 import React from "react";
 import "../stylesheet/Character/ResetButton.scss";
 
-const ResetButton = (props) => {
-  const handleResetClick = () => {
-    props.handleReset();
-  };
+const ResetButton = ({handleReset}) => {
   return (
-    <div className="reset" title='resetButton'>
-      <button className="reset__button" onClick={handleResetClick}>
+    <div className="reset">
+      <button type='reset' title='resetButton' className="reset__button" onClick={handleReset}>
         <i className="reset__button--icon fas fa-trash"></i>
       </button>
     </div>
