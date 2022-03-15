@@ -1,5 +1,5 @@
 import { Link, BrowserRouter } from "react-router-dom";
-import "../../stylesheet/Notfound.scss";
+import "../../stylesheet/NotFound.scss";
 import PropTypes from "prop-types";
 
 function PageNotFound() {

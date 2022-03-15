@@ -1,4 +1,4 @@
-import "../../stylesheet/Notfound.scss";
+import "../../stylesheet/NotFound.scss";
 import PropTypes from "prop-types";
 
 const NotFound = () => {

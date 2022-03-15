@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import getApiData from "../services/Api";
 import CharactersList from "../components/Characters/CharactersList";
-import Notfound from "./NotFound/NotFound";
+import NotFound from "./NotFound/NotFound";
 import PageNotFound from "./NotFound/PageNotFound";
 import CharacterDetail from "./Characters/CharacterDetail";
-import Logo from "../image/Rick_and_Morty.png";
+import Logo from "../Image/Rick_and_Morty.png";
 import "../stylesheet/App.scss";
 import ls from "../services/local-storage";
 import Filters from "./Filters/Filters";
@@ -99,7 +99,7 @@ const App = () => {
                 {filteredCharacters.length > 0 ? (
                   <CharactersList characters={filteredCharacters} />
                 ) : (
-                  <Notfound />
+                  <NotFound />
                 )}
               </ul>
             </div>
